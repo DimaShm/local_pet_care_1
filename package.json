@@ -1,0 +1,17 @@
+{
+  "name": "local_pet_care_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/style/main.scss src/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "stylelint": "^14.15.0",
+    "stylelint-scss": "^4.3.0"
+  }
+}

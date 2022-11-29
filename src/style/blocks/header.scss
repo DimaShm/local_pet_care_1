@@ -1,0 +1,104 @@
+.header {
+
+  &__navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 39px;
+    margin-bottom: 60px;
+  }
+
+  &__logo {
+    font-size: 36px;
+    line-height: 54px;
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu_item {
+    display: block;
+    position: relative;
+    margin-right: 48px;
+    color: #000;
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
+
+    &--active {
+      position: relative;
+      color: $color-blue;
+      
+      &::after {
+        position: absolute;
+        box-sizing: border-box;
+        bottom: 0;
+        left: 5%;
+        content: "";
+        width: 90%;
+        border: 1px solid;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  &__menu_link {
+    padding: 15px 0;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: inherit;
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  &__blog_title {
+    width: 55px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    background-image: url("img/icons/toggle.svg");
+    background-size: 17px;
+    background-repeat: no-repeat;
+    background-position: 40px 0;
+  }
+
+  &__blog {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    width: 230px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(48, 95, 193, 0.3);
+    cursor: pointer;
+    z-index: 3;
+    opacity: 0;
+  }
+
+  &__blog_item {
+    margin: 0;
+    display: block;
+    padding: 4px 16px;
+    
+    &:hover {
+      background-color: $background2;
+    }
+  }
+}

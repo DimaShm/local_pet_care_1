@@ -1,0 +1,46 @@
+.service {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 74px 104px 72px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    width: 1095px;
+    margin-bottom: 60px;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 227px 227px;
+    row-gap: 48px;
+    column-gap: 40px;
+    width: 100%;
+  }
+
+  &__option_block {
+    display: flex;
+    width: 596px;
+    height: 227px;
+    padding: 26px 83px 64px 40px;
+    border: 1px solid rgba(48, 95, 193, 0.3);
+  }
+
+  &__option_icon {
+    width: 62px;
+    height: 62px;
+    margin-right: 24px;
+  }
+
+  &__option_title {
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 64px;
+    color: $color-black;
+  }
+}

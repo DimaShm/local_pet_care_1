@@ -1,0 +1,28 @@
+.button_blue {
+  padding: 10px 24px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: $color-blue;
+  color: #fff;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  &:active {
+    border: 1px solid $color-blue;
+    box-shadow: -1px -1px 5px $color-blue, 1px 1px 5px $color-blue;
+    font-weight: 800;
+  }
+
+  &--submit {
+    padding: 16px 48px;
+  }
+}
