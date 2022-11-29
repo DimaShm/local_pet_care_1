@@ -24,11 +24,6 @@ hr {
   overflow: visible;
 }
 
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
 a {
   background-color: transparent;
   text-decoration: none;
@@ -39,60 +34,14 @@ ul {
   list-style: none;
 }
 
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
-
-b, strong {
-  font-weight: bolder;
-}
-
-code, kbd, samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
 img {
   border-style: none;
 }
 
-button, input, optgroup, select, textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-}
-
-button, input {
-  overflow: visible;
-}
-
-button, select {
-  text-transform: none;
-}
-
-button, [type=button], [type=reset], [type=submit] {
+button,
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -111,33 +60,14 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
-
-progress {
-  vertical-align: baseline;
-}
-
-textarea {
-  overflow: auto;
-}
-
-[type=checkbox], [type=radio] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   padding: 0;
 }
 
-[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -171,15 +101,15 @@ template {
   display: none;
 }
 
-.page__body {
-  margin: 0 auto;
-  max-width: 1440px;
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .body {
-  font-family: Roboto;
-  width: 100%;
   background-color: #fff;
+  max-width: 1440px;
 }
 .body__header {
   margin: 50px 66px 103px 134px;
@@ -252,7 +182,7 @@ template {
   background-image: url("img/icons/toggle.svg");
   background-size: 17px;
   background-repeat: no-repeat;
-  background-position: 40px 0px;
+  background-position: 40px 0;
 }
 .header__blog {
   position: absolute;
@@ -268,7 +198,7 @@ template {
 .header__blog_item {
   margin: 0;
   display: block;
-  padding: 4px 16px 4px;
+  padding: 4px 16px;
 }
 .header__blog_item:hover {
   background-color: #faf9ff;
@@ -349,7 +279,6 @@ template {
 }
 .hero__progress_title--left {
   padding-left: 0;
-  padding-left: 0;
 }
 .hero__container {
   position: relative;
@@ -395,7 +324,7 @@ template {
   font-weight: 700;
   display: inline-block;
   font-size: 48px;
-  color: #333333;
+  color: #333;
 }
 .title--blue {
   color: #305fc1;
@@ -406,7 +335,7 @@ template {
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
-  color: #333333;
+  color: #333;
 }
 
 .sell {
@@ -438,7 +367,7 @@ template {
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
-  color: #333333;
+  color: #333;
   margin-bottom: 14px;
 }
 .sell__price_title {
@@ -446,7 +375,7 @@ template {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  color: #333333;
+  color: #333;
   margin-bottom: 54px;
 }
 .sell__price_value {
@@ -478,7 +407,7 @@ template {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #666666;
+  color: #666;
 }
 .text--white {
   color: #fff;
@@ -671,7 +600,7 @@ template {
   font-weight: 700;
   font-size: 30px;
   line-height: 64px;
-  color: #333333;
+  color: #333;
 }
 
 .about {
@@ -702,7 +631,7 @@ template {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #333333;
+  color: #333;
 }
 .about__list_item {
   display: flex;
@@ -769,7 +698,7 @@ template {
   display: flex;
   flex-shrink: 0;
   justify-content: space-between;
-  width: 530px;
+  width: 600px;
   height: 392px;
   padding: 16px 0 64px 20px;
   margin-right: 16px;
@@ -780,7 +709,7 @@ template {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 14px 14px 0 14px;
+  padding: 24px 24px 0;
   border-radius: 8px;
 }
 .testimonials__item {
@@ -788,8 +717,8 @@ template {
   flex-direction: column;
   flex-shrink: 0;
   align-items: center;
-  padding: 40px 16px;
-  width: 286px;
+  padding: 40px 24px;
+  width: 296px;
   height: 392px;
   background-color: #faf9ff;
   border-radius: 8px;
@@ -829,7 +758,7 @@ template {
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
-  color: #333333;
+  color: #333;
 }
 
 .news {
@@ -892,11 +821,11 @@ template {
   cursor: pointer;
   transition: all 0.3s linear;
 }
-.news__button:hover:not(:active) {
-  box-shadow: 1px 1px 5px #305fc1;
-}
 .news__button:active {
   box-shadow: -1px -1px 5px #305fc1;
+}
+.news__button:hover:not(:active) {
+  box-shadow: 1px 1px 5px #305fc1;
 }
 .news__button--like {
   background-image: url("img/icons/like.svg");
@@ -909,13 +838,13 @@ template {
 }
 
 .footer {
-  padding: 38px 104px 0;
+  padding-top: 38px;
 }
 .footer__top {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr 2fr;
   gap: 60px;
-  padding-bottom: 100px;
+  padding: 0 104px 100px;
 }
 .footer__top_cell {
   flex-shrink: 1;
@@ -964,7 +893,7 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 27px 0px;
+  padding: 27px 0;
   background-color: #49785c;
 }
 .footer__contacts {
