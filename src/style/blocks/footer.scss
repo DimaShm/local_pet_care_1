@@ -34,7 +34,7 @@
     }
 
     &:hover {
-      color: #000;
+      color: $color-blue;
       font-weight: 700;
     }
   }
@@ -78,18 +78,56 @@
     padding: 5px;
     margin-right: 94px;
     cursor: pointer;
-    transition: $transition;
+    color: #fff;
 
     &:last-child {
       margin-right: 0;
     }
+  }
 
-    &:hover {
-      box-shadow: 1px 1px 3px #fff;
-    }
+  &__contact:hover > &__text {
+    transition: $transition;
+    color: #000;
   }
 
   &__icon {
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
     margin-right: 16px;
+
+    &--location {
+      background-image: url("img/icons/location.svg");
+    }
+
+    &--email {
+      background-image: url("img/icons/email.svg");
+    }
+
+    &--phone {
+      background-image: url("img/icons/phone.svg");
+
+      &:hover {
+        background-image: url("img/icons/phone_black.svg");
+      }
+    }
+  }
+
+  &__contact:hover > &__icon {
+    transition: $transition;
+  }
+
+  &__contact--location:hover > &__icon--location {
+    background-image: url("img/icons/location_black.svg");
+  }
+
+  &__contact--email:hover > &__icon--email {
+    background-image: url("img/icons/email_black.svg");
+  }
+
+  &__contact--phone:hover > &__icon--phone {
+    background-image: url("img/icons/phone_black.svg");
   }
 }

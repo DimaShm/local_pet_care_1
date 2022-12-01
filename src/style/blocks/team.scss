@@ -45,14 +45,34 @@
   }
 
   &__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 32px;
     height: 32px;
-    background-color: $color-blue;
     border: 0;
     border-radius: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
     cursor: pointer;
+    background-color: $color-blue;
+    transition: $transition;
+
+    &--facebook {
+      background-image: url("img/icons/facebook.svg");
+
+      &:hover {
+        background-image: url("img/icons/facebook_white.svg");
+        background-color: #fff;
+        border: 1px solid $color-blue;
+      }
+    }
+
+    &--instagram {
+      background-image: url("img/icons/instagram.svg");
+
+      &:hover {
+        background-image: url("img/icons/instagram_white.svg");
+        background-color: #fff;
+        border: 1px solid $color-blue;
+      }
+    }
   }
 }  

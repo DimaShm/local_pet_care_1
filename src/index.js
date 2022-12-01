@@ -20,7 +20,7 @@ checkButtonState();
 menu.addEventListener('click', (event) => {
   const element = event.target;
   if (element && !element.closest('.header__menu_item')) {
-    blog.style.opacity = 0;
+    blog.classList.remove('header__blog--active');
     return;
   }
 
@@ -33,22 +33,24 @@ menu.addEventListener('click', (event) => {
   element.closest('.header__menu_item').classList.add('header__menu_item--active');
 
   if (element.closest('.header__menu_item').id !=='#blog_item') {
-    blog.style.opacity = 0;
+    blog.classList.remove('header__blog--active');
   }
 });
 
 blogTitle.onclick = () => {
-  blog.style.opacity === '1' 
-    ? blog.style.opacity = 0
-    : blog.style.opacity = 1;
+  if (blog.classList.contains('header__blog--active')) {
+    blog.classList.remove('header__blog--active');
+  } else {
+    blog.classList.add('header__blog--active');
+  }
 };
 
 blog.onclick = () => {
-  blog.style.opacity = 0;
+  blog.classList.remove('header__blog--active');
 }
 
 blog.onmouseleave = () => {
-  blog.style.opacity = 0;
+  blog.classList.remove('header__blog--active');
 }
 
 form.addEventListener('submit', (event) => {

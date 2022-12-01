@@ -31,27 +31,19 @@
     border: 1px solid transparent;
     border-radius: 8px;
     font-family: Raleway, sans-serif;
-    font-weight: 400;
+    font-weight: 600;
+    color: #000;
     font-size: 16px;
     line-height: 22px;
     cursor: pointer;
     transition: $transition;
 
     &:hover {
-      background-color: #fff;
-      color: #000;
-      border: 1px solid #000;
+      color: $color-blue;
     }
 
     &--active {
-      background-color: $color-blue;
-      color: #fff;
-
-      &:hover {
-        background-color: $color-blue;
-        color: #fff;
-        border: 1px solid transparent;
-      }
+      color: $color-blue;
     }
   }
 

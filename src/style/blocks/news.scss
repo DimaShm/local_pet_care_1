@@ -68,23 +68,31 @@
     transition: $transition;
 
     &:active {
-      box-shadow: -1px -1px 5px $color-blue;
-    }
-
-    &:hover:not(:active) {
       box-shadow: 1px 1px 5px $color-blue;
     }
 
     &--like {
       background-image: url("img/icons/like.svg");
+
+      &:hover {
+        background-image: url("img/icons/like_white.svg");
+      }
     }
 
     &--comment {
       background-image: url("img/icons/comment.svg");
+
+      &:hover {
+        background-image: url("img/icons/comment_white.svg");
+      }
     }
 
     &--share {
       background-image: url("img/icons/share.svg");
+
+      &:hover {
+        background-image: url("img/icons/share_white.svg");
+      }
     }
   }
 }

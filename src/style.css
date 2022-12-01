@@ -195,6 +195,9 @@ template {
   z-index: 3;
   opacity: 0;
 }
+.header__blog--active {
+  opacity: 1;
+}
 .header__blog_item {
   margin: 0;
   display: block;
@@ -205,7 +208,6 @@ template {
 }
 
 .hero {
-  position: relative;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 54px;
@@ -226,16 +228,6 @@ template {
   position: relative;
   color: #305fc1;
   z-index: 1;
-}
-.hero__title_background {
-  position: absolute;
-  top: 15px;
-  left: 95px;
-  width: 40px;
-  height: 35px;
-  transform: rotate(55deg);
-  background-image: url("img/title_background.png");
-  z-index: -1;
 }
 .hero__text {
   width: 369px;
@@ -310,7 +302,8 @@ template {
   transition: all 0.3s linear;
 }
 .hero__play_button:hover {
-  box-shadow: -2px 2px 5px #305fc1, 2px -2px 5px #305fc1;
+  background-image: url("img/play_button_white.svg");
+  border: 1px solid #305fc1;
 }
 
 .logo {
@@ -395,9 +388,6 @@ template {
   cursor: pointer;
   transition: all 0.3s linear;
 }
-.sell__scroll_label:hover {
-  background-color: #305fc1;
-}
 .sell__scroll_input:checked + .sell__scroll_label {
   background-color: #305fc1;
 }
@@ -458,25 +448,18 @@ template {
   border: 1px solid transparent;
   border-radius: 8px;
   font-family: Raleway, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
+  color: #000;
   font-size: 16px;
   line-height: 22px;
   cursor: pointer;
   transition: all 0.3s linear;
 }
 .gallery__sort_button:hover {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
+  color: #305fc1;
 }
 .gallery__sort_button--active {
-  background-color: #305fc1;
-  color: #fff;
-}
-.gallery__sort_button--active:hover {
-  background-color: #305fc1;
-  color: #fff;
-  border: 1px solid transparent;
+  color: #305fc1;
 }
 .gallery__photo_container {
   gap: 60px;
@@ -551,15 +534,31 @@ template {
   margin-bottom: 19px;
 }
 .team__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 32px;
   height: 32px;
-  background-color: #305fc1;
   border: 0;
   border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
+  background-color: #305fc1;
+  transition: all 0.3s linear;
+}
+.team__button--facebook {
+  background-image: url("img/icons/facebook.svg");
+}
+.team__button--facebook:hover {
+  background-image: url("img/icons/facebook_white.svg");
+  background-color: #fff;
+  border: 1px solid #305fc1;
+}
+.team__button--instagram {
+  background-image: url("img/icons/instagram.svg");
+}
+.team__button--instagram:hover {
+  background-image: url("img/icons/instagram_white.svg");
+  background-color: #fff;
+  border: 1px solid #305fc1;
 }
 
 .service {
@@ -669,7 +668,7 @@ template {
   border: 1px solid #d9d9d9;
 }
 .testimonials__nav_button:active {
-  box-shadow: -1px -1px 2px #305fc1, 1px 1px 2px #305fc1;
+  box-shadow: 1px 1px 5px #305fc1;
 }
 .testimonials__nav_button:disabled {
   opacity: 0.4;
@@ -822,19 +821,25 @@ template {
   transition: all 0.3s linear;
 }
 .news__button:active {
-  box-shadow: -1px -1px 5px #305fc1;
-}
-.news__button:hover:not(:active) {
   box-shadow: 1px 1px 5px #305fc1;
 }
 .news__button--like {
   background-image: url("img/icons/like.svg");
 }
+.news__button--like:hover {
+  background-image: url("img/icons/like_white.svg");
+}
 .news__button--comment {
   background-image: url("img/icons/comment.svg");
 }
+.news__button--comment:hover {
+  background-image: url("img/icons/comment_white.svg");
+}
 .news__button--share {
   background-image: url("img/icons/share.svg");
+}
+.news__button--share:hover {
+  background-image: url("img/icons/share_white.svg");
 }
 
 .footer {
@@ -869,7 +874,7 @@ template {
   padding-top: 0;
 }
 .footer__top_cell_item:hover {
-  color: #000;
+  color: #305fc1;
   font-weight: 700;
 }
 .footer__logo {
@@ -906,16 +911,46 @@ template {
   padding: 5px;
   margin-right: 94px;
   cursor: pointer;
-  transition: all 0.3s linear;
+  color: #fff;
 }
 .footer__contact:last-child {
   margin-right: 0;
 }
-.footer__contact:hover {
-  box-shadow: 1px 1px 3px #fff;
+.footer__contact:hover > .footer__text {
+  transition: all 0.3s linear;
+  color: #000;
 }
 .footer__icon {
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   margin-right: 16px;
+}
+.footer__icon--location {
+  background-image: url("img/icons/location.svg");
+}
+.footer__icon--email {
+  background-image: url("img/icons/email.svg");
+}
+.footer__icon--phone {
+  background-image: url("img/icons/phone.svg");
+}
+.footer__icon--phone:hover {
+  background-image: url("img/icons/phone_black.svg");
+}
+.footer__contact:hover > .footer__icon {
+  transition: all 0.3s linear;
+}
+.footer__contact--location:hover > .footer__icon--location {
+  background-image: url("img/icons/location_black.svg");
+}
+.footer__contact--email:hover > .footer__icon--email {
+  background-image: url("img/icons/email_black.svg");
+}
+.footer__contact--phone:hover > .footer__icon--phone {
+  background-image: url("img/icons/phone_black.svg");
 }
 
 .button_blue {
@@ -938,7 +973,8 @@ template {
 .button_blue:active {
   border: 1px solid #305fc1;
   box-shadow: -1px -1px 5px #305fc1, 1px 1px 5px #305fc1;
-  font-weight: 800;
+  color: #305fc1;
+  font-weight: 700;
 }
 .button_blue--submit {
   padding: 16px 48px;

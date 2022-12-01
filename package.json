@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass src/style/main.scss src/style.css --watch"
+    "sass": "sass src/style/main.scss src/style.css --watch",
+    "start": "live-server --open=./index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "live-server": "^1.2.2",
     "node-sass": "^8.0.0",
     "stylelint": "^14.15.0",
     "stylelint-scss": "^4.3.0"

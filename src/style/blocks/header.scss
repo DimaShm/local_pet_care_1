@@ -90,6 +90,10 @@
     cursor: pointer;
     z-index: 3;
     opacity: 0;
+
+    &--active {
+      opacity: 1;
+    }
   }
 
   &__blog_item {

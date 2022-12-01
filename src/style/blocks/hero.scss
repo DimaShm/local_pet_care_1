@@ -1,5 +1,4 @@
 .hero {
-  position: relative;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 54px;
@@ -22,17 +21,6 @@
       color: $color-blue;
       z-index: 1;
     }
-  }
-
-  &__title_background {
-    position: absolute;
-    top: 15px;
-    left: 95px;
-    width: 40px;
-    height: 35px;
-    transform: rotate(55deg);
-    background-image: url("img/title_background.png");
-    z-index: -1;
   }
 
   &__text {
@@ -118,7 +106,8 @@
     transition: $transition;
 
     &:hover {
-      box-shadow: -2px 2px 5px $color-blue, 2px -2px 5px $color-blue;
+      background-image: url("img/play_button_white.svg");
+      border: 1px solid $color-blue;
     }
   }
 }

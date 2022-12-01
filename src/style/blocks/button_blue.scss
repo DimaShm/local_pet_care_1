@@ -19,7 +19,8 @@
   &:active {
     border: 1px solid $color-blue;
     box-shadow: -1px -1px 5px $color-blue, 1px 1px 5px $color-blue;
-    font-weight: 800;
+    color: $color-blue;
+    font-weight: 700;
   }
 
   &--submit {
