@@ -56,19 +56,23 @@
   }
 
   &__button {
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
     margin-right: 16px;
-    background-size: 24px;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 65%;
     border: 0;
-    background-color: $background2;
+    background-color: #fff;
     cursor: pointer;
     transition: $transition;
 
+    &:hover {
+      background-color: $color-blue;
+    }
+
     &:active {
-      box-shadow: 1px 1px 5px $color-blue;
+      box-shadow: 0 0 5px $color-blue, 0 0 5px $color-blue;
     }
 
     &--like {

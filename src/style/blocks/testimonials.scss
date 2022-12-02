@@ -27,8 +27,12 @@
     border: 0;
     cursor: pointer;
 
+    &:active {
+      box-shadow: 0 0 5px $color-blue, 0 0 5px $color-blue;
+    }
+
     &:hover {
-      border: 1px solid #d9d9d9;
+      background-color: $color-blue;
     }
 
     &:disabled {
@@ -40,10 +44,18 @@
 
     &--left {
       background-image: url("img/icons/arrow_left.svg");
+
+      &:hover {
+        background-image: url("img/icons/arrow_left_white.svg");
+      }
     }
 
     &--right {
       background-image: url("img/icons/arrow_right.svg");
+
+      &:hover {
+        background-image: url("img/icons/arrow_right_white.svg");
+      }
     }
   }
 

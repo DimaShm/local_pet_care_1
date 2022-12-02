@@ -109,5 +109,10 @@
       background-image: url("img/play_button_white.svg");
       border: 1px solid $color-blue;
     }
+
+    &:active {
+      border-color: $color-blue;
+      box-shadow: 0 0 10px $color-blue, 0 0 10px $color-blue;
+    }
   }
 }

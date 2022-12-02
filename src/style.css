@@ -305,6 +305,10 @@ template {
   background-image: url("img/play_button_white.svg");
   border: 1px solid #305fc1;
 }
+.hero__play_button:active {
+  border-color: #305fc1;
+  box-shadow: 0 0 10px #305fc1, 0 0 10px #305fc1;
+}
 
 .logo {
   font-family: Raleway, sans-serif;
@@ -544,6 +548,9 @@ template {
   background-color: #305fc1;
   transition: all 0.3s linear;
 }
+.team__button:active {
+  box-shadow: 0 0 5px #305fc1, 0 0 5px #305fc1;
+}
 .team__button--facebook {
   background-image: url("img/icons/facebook.svg");
 }
@@ -664,8 +671,11 @@ template {
   border: 0;
   cursor: pointer;
 }
+.testimonials__nav_button:active {
+  box-shadow: 0 0 5px #305fc1, 0 0 5px #305fc1;
+}
 .testimonials__nav_button:hover {
-  border: 1px solid #d9d9d9;
+  background-color: #305fc1;
 }
 .testimonials__nav_button:disabled {
   opacity: 0.4;
@@ -676,8 +686,14 @@ template {
 .testimonials__nav_button--left {
   background-image: url("img/icons/arrow_left.svg");
 }
+.testimonials__nav_button--left:hover {
+  background-image: url("img/icons/arrow_left_white.svg");
+}
 .testimonials__nav_button--right {
   background-image: url("img/icons/arrow_right.svg");
+}
+.testimonials__nav_button--right:hover {
+  background-image: url("img/icons/arrow_right_white.svg");
 }
 .testimonials__wrapper {
   position: relative;
@@ -806,19 +822,22 @@ template {
   margin-right: 0;
 }
 .news__button {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   margin-right: 16px;
-  background-size: 24px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 65%;
   border: 0;
-  background-color: #faf9ff;
+  background-color: #fff;
   cursor: pointer;
   transition: all 0.3s linear;
 }
+.news__button:hover {
+  background-color: #305fc1;
+}
 .news__button:active {
-  box-shadow: 1px 1px 5px #305fc1;
+  box-shadow: 0 0 5px #305fc1, 0 0 5px #305fc1;
 }
 .news__button--like {
   background-image: url("img/icons/like.svg");
@@ -956,7 +975,7 @@ template {
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  border: 1px solid;
+  border: 1px solid transparent;
   border-radius: 8px;
   background-color: #305fc1;
   color: #fff;
@@ -964,12 +983,13 @@ template {
   transition: all 0.3s linear;
 }
 .button_blue:hover {
+  border-color: #000;
   background-color: #fff;
   color: #000;
 }
 .button_blue:active {
-  border: 1px solid #305fc1;
-  box-shadow: -1px -1px 5px #305fc1, 1px 1px 5px #305fc1;
+  border-color: #305fc1;
+  box-shadow: 0 0 5px #305fc1, 0 0 5px #305fc1;
   color: #305fc1;
   font-weight: 700;
 }

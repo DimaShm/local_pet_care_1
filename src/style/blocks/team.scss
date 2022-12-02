@@ -55,6 +55,10 @@
     background-color: $color-blue;
     transition: $transition;
 
+    &:active {
+      box-shadow: 0 0 5px $color-blue, 0 0 5px $color-blue;
+    }
+
     &--facebook {
       background-image: url("img/icons/facebook.svg");
 
